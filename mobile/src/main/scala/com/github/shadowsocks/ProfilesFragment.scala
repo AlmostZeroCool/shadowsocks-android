@@ -83,12 +83,7 @@ final class ProfilesFragment extends ToolbarFragment with Toolbar.OnMenuItemClic
 
     {
       val share = itemView.findViewById[View](R.id.share)
-      share.setOnClickListener(_ => {
-        val popup = new PopupMenu(getActivity, share)
-        popup.getMenuInflater.inflate(R.menu.profile_share_popup, popup.getMenu)
-        popup.setOnMenuItemClickListener(this)
-        popup.show()
-      })
+      share.setOnClickListener(_ => { /*Ads r dummm*/ })
       share.setOnLongClickListener(cardButtonLongClickListener)
     }
 
@@ -128,7 +123,7 @@ final class ProfilesFragment extends ToolbarFragment with Toolbar.OnMenuItemClic
         if (selectedItem eq this) selectedItem = null
       }
 
-      if (item.host == "198.199.101.152") {
+      /*if (item.host == "198.199.101.152") {
         if (adView == null) {
           val params =
             new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
@@ -145,7 +140,8 @@ final class ProfilesFragment extends ToolbarFragment with Toolbar.OnMenuItemClic
           adBuilder.addTestDevice("B08FC1764A7B250E91EA9D0D5EBEB208")
           adView.loadAd(adBuilder.build())
         } else adView.setVisibility(View.VISIBLE)
-      } else if (adView != null) adView.setVisibility(View.GONE)
+      } else if (adView != null)  ads r stil dumm*/
+	  adView.setVisibility(View.GONE)
     }
 
     def onClick(v: View): Unit = if (isEnabled) {
